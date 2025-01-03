@@ -18,12 +18,15 @@ def get_books(isbnNum):
                     works_info = data["works"]["key"]
                     author = get_author_from_works(works_info)
             else:
-                print("")
+                print('')
         else:
             print("Error")
 
     except Exception as e:
         print(e)
+    
+    return title, author
+
 
 def get_author(author_info):
     url_author = f"https://openlibrary.org{author_info}.json"

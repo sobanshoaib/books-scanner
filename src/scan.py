@@ -14,7 +14,7 @@ def get_image():
         
         cv2.imshow("Barcode Scanner", frame)
 
-        if cv2.waitKey(1) = ord('q'):
+        if cv2.waitKey(1) == ord('q'):
             print("Scan Cancelled")
             result = 'Cancelled'
             break
@@ -27,6 +27,3 @@ def get_image():
 def main():
     get_result = get_image()
     print(f"Result: {get_result}")
-
-
-
